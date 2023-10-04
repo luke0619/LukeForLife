@@ -1,0 +1,75 @@
+.resume {
+
+    &__card {
+        background-color: $color-secondary;
+        grid-column: 8 / 11;
+        padding: 3rem;
+        display: grid;
+        justify-content: center;
+        align-content: start;
+        grid-row-gap: 1rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / -1;
+        }
+
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: max-content;
+        margin-top: 3rem;
+        grid-column-gap: 2rem;
+        grid-row-gap: 4vh;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+
+    }
+
+    &__img {
+        width: 10rem;
+        border-radius: 50%;
+    }
+
+    &__details {
+        color: $color-white;
+    }
+
+    &__banner {
+        color: $color-white;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-rows: 75vh min-content;
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) minmax(6rem, 1fr) [full-end];
+    }
+
+    &__header {
+        grid-column: 1 / 8;
+        background-image: linear-gradient(rgba($color-grey-dark, .93), rgba($color-grey-dark-3, .93)), url("../../src/assets/Nangang.JPG");
+        background-size: cover;
+        background-position: center;
+        padding: 8rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__btn {
+        margin-top: 1rem;
+        align-self: start;
+        justify-self: start;
+    }
+
+}
